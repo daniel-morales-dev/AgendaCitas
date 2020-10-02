@@ -16,7 +16,7 @@ class Home extends Component {
     render() {
         return (
             <>
-                {this.state.logged ? window.location.href="/calendario" : <Login/>}
+                {this.state.logged ? window.location.href="/ciclos" : <Login/>}
 
             </>
         );

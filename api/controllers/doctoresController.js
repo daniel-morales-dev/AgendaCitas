@@ -50,8 +50,9 @@ doctoresController.registrarDoctor = async (req, res, next) => {
 }
 doctoresController.loginDoctor = async (req, res, next) => {
     try {
+        console.log(req.body.cedula)
         const doctor = await doctorModel.findOne(
-            req.body.cedula
+            {cedula:req.body.cedula}
         );
         if (!doctor) {
             return res.status(409).json({

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose'); //Libreria de JS que me permite unir Node con MongoDb y crear los esquemas
 
-const URI = 'mongodb://localhost:27017/citasmedicas'; //Ruta de conexion a la BD
+const URI = 'mongodb+srv://admin:cecep2020@cluster0.nbres.mongodb.net/citasmedicas?retryWrites=true&w=majority'; //Ruta de conexion a la BD
 mongoose
     .connect(URI, {
         useNewUrlParser: true,

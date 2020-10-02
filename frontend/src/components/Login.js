@@ -8,8 +8,10 @@ class Login extends Component {
     }
     onsubmitForm = async (e)=>{
         e.preventDefault();
-        console.log(this.state.cedula)
-        const res = await axios.post('http://localhost:4000/api/login',this.state.cedula)
+        const data = {
+            cedula:this.state.cedula
+        }
+        const res = await axios.post('/api/login',data)
         if (res.status===200){
             await Swal.fire(
                 'Bienvenido!',
@@ -17,7 +19,7 @@ class Login extends Component {
                 'success'
             )
             await localStorage.setItem('token',res.data.token)
-            window.location.href = '/calendario';
+            window.location.href = '/ciclos';
         }
     }
     onChangeInput = (e)=>{

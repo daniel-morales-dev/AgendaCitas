@@ -5,6 +5,7 @@ import HoraPicker from "./HoraPicker";
 import DiaCita from "./DiaCita";
 import Login from "./Login";
 import Logout from "./Logout";
+import Ciclos from "./Ciclos";
 
 //RUTAS//
 
@@ -29,6 +30,7 @@ export default function Routes() {
             <Route path="/" exact component={Home} />
             <SecureRoute  path="/calendario" exact component={DiaCita}/>
             <SecureRoute path="/hora" exact component={HoraPicker} />
+            <SecureRoute path="/ciclos" exact component={Ciclos} />
             <RouteSesions path="/login" exact component={Login} />
             <SecureRoute path="/logout" component={Logout} />
         </Switch>
