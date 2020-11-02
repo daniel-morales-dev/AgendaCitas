@@ -14,5 +14,5 @@ app.get('*', function (req, res) {
 });
 
 app.listen(process.env.PORT || port, () => {
-    console.log('Server on port' + port);
+    console.log('Server on port ' + port);
 })
